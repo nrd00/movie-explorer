@@ -51,7 +51,7 @@ function Home() {
   return (
     <>
       <div className="container">
-        <h1 className="text-3xl font-bold pt-3">The Best Moives are here.</h1>
+        <h1 className="text-3xl font-bold pt-6">The Best Moives are here.</h1>
         <div className="container mx-auto py-8 flex">
           <select
             value={genre}

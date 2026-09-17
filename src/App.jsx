@@ -6,6 +6,7 @@ import MovieDetails from "./Components/MovieDetails";
 import Discover from "./Pages/Discover";
 import Wishlist from "./Pages/Wishlist";
 import Search from "./Pages/Search";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/movies/:id" element={<MovieDetails />} />
         <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
+      <Footer />
     </>
   );
 }
