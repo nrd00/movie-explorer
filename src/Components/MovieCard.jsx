@@ -7,6 +7,7 @@ function MovieCard({ movie }) {
   const handleViewDetails = () => {
     navigate(`/movies/${movie.id}`);
   };
+
   return (
     <div className="card w-48 bg-base-100 shadow-xl">
       <figure>
@@ -33,7 +34,7 @@ function MovieCard({ movie }) {
           View
         </button>
 
-        <WishButton />
+        <WishButton mode={"light"} movie={movie} />
       </div>
     </div>
   );

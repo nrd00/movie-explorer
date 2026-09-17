@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getMovieDetails } from "../Services/tmdb";
 import WishButton from "./WishButton";
+import Loader from "./Loader";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const MovieDetails = () => {
   }, [id]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loader />;
   }
 
   if (!movie) {
@@ -139,7 +140,7 @@ const MovieDetails = () => {
                   Trailer
                 </button>
 
-                <WishButton className="bg-white/10 text-white" />
+                {movie && <WishButton mode="light" movie={movie} />}
               </div>
             </div>
           </div>
